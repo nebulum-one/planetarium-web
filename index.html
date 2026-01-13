@@ -58,7 +58,7 @@ p {
 
 a {
 	text-decoration: none;
-	color: #adf;
+	color: #d9f19e;
 }
 
 #status-progress, #status-notice {
@@ -77,19 +77,19 @@ a {
 }
 
 @keyframes progressPulse {
-	0%, 100% { background-color: #4a9eff; }
-	50% { background-color: #2d7dd2; }
+	0%, 100% { background-color: #d9f19e; }
+	50% { background-color: #b8d17a; }
 }
 
 #status-progress-inner {
 	height: 100%;
-	background-color: #4a9eff;
+	background-color: #d9f19e;
 	transition: width 0.3s ease;
 	animation: progressPulse 2s ease-in-out infinite;
 }
 
 #status-text {
-	color: #adf;
+	color: #d9f19e;
 	font-size: 14px;
 	margin-top: 10px;
 }
@@ -200,9 +200,7 @@ function updateProgress(bytes, fileName) {
 	}
 	
 	if (statusText) {
-		const loadedMB = (loadedBytes / (1024 * 1024)).toFixed(1);
-		const totalMB = (totalBytes / (1024 * 1024)).toFixed(1);
-		statusText.textContent = `Loading ${fileName}... ${loadedMB} MB / ${totalMB} MB (${percentage.toFixed(0)}%)`;
+		statusText.textContent = `Building solar system (${percentage.toFixed(0)}%)`;
 	}
 }
 
